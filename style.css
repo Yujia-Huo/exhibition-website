@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: #f8d7d0;
+}
+
+.header,
+.footer {
+    grid-column: span 12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #feeae6;
+}
+
+.title {
+    font-size: 5em;
+    color: #b35457;
+    font-weight: bold;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
+.info p {
+    margin: 5px 0;
+    text-align: right;
+}
+
+.exhibit-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.exhibit {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exhibit-image {
+    width: 100%;
+    height: 200px;
+    /* This should be adjusted according to the image's aspect ratio */
+    background-color: #ccc;
+    /* Placeholder for images */
+}
+
+.exhibit-info h2 {
+    margin: 10px 0;
+    color: #b35457;
+    font-size: 2em;
+}
+
+.exhibit-info p {
+    margin: 5px 0;
+}
+
+.footer {
+    background-color: #b35457;
+    color: white;
+}
+
+.footer .exhibition-details p,
+.footer .location p {
+    margin: 5px 0;
+}

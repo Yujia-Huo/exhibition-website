@@ -1,79 +1,155 @@
+/* General Styling */
 body {
-    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 20px;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
+    background: #fff;
+    min-height: 97vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.wrapper {
+/* Header */
+header {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    background-color: #f8d7d0;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 25px 18px;
+    /* padding: 20px; */
+    /* background: #000; */
+    color: #454545;
+    grid-template-areas: 
+    "uni-info . . exh-info pro-info"
 }
 
-.header,
-.footer {
-    grid-column: span 12;
+.university-info,
+.exhibition-info,
+.program-info {
+    font-size: 14px;
+}
+
+.university-info{
+    grid-area: uni-info;
+}
+
+
+.exhibition-info{
+    grid-area: exh-info;
+}
+
+.program-info{
+    grid-area: pro-info;
+}
+
+/* Main */
+
+h1 {
+    text-align: right;
+    /* font-size: 4em; */
+    color: red;
+}
+
+#main_title{
+    font-size:36pt;
+    line-height:100%;
+    width: 290pt;
+    margin-top:9vh;
+    margin-left: 9vw;
+    margin-bottom:0;
+    /* position: absolute; */
+}
+
+.projects {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #feeae6;
+    flex-direction: column; /* This will stack the .project divs vertically */
+    align-items: center; /* This centers the .project divs on the cross axis (horizontally, in this case) */
+    gap: 25px; /* This sets a gap between the .project divs */
 }
 
-.title {
-    font-size: 5em;
-    color: #b35457;
+
+
+.project{
+    /* margin-left: 20px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 25px 18px;
+    /* padding: 20px; */
+    grid-template-areas: 
+    ". img title nameProgram ."
+
+}
+
+
+.project-thumbnail {
+    position: relative;
+    grid-area: img;
+    width: 100%;
+    height:70px;
+    background-image: url('./Yujia_b.png'); /* Default image */
+    background-size: 100% 100%;
+    background-position: center;
+    transition: background-image 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.project-thumbnail:hover {
+    background-image: url('./Yujia_r.png'); /* Image on hover */
+}
+.project-thumbnail .keyword{
+    font-size:30pt;
+    position: absolute;
+    left: 0;
+    color: #eaeaea;
+
+}
+
+
+.nameAndProgram{
+    font-size: 20px;
+    grid-area: nameProgram;
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.project-title {
+    font-size: 20px;
+    grid-area: title;
+    /* width: 200px; */
     font-weight: bold;
-    writing-mode: tb-rl;
-    transform: rotate(-180deg);
 }
 
-.info p {
-    margin: 5px 0;
+/* Footer */
+footer {
+    margin-top: auto;
+    width: 100%;
+    /* background: #333; */
+    color: #454545;
+    display: grid;
+    gap: 25px 18px;
+    /* padding: 20px; */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". . . time location"
+}
+
+.location{
     text-align: right;
 }
 
-.exhibit-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.exhibit {
-    grid-column: span 4;
+#time{
+    grid-area: time;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content:space-between;
 }
 
-.exhibit-image {
-    width: 100%;
-    height: 200px;
-    /* This should be adjusted according to the image's aspect ratio */
-    background-color: #ccc;
-    /* Placeholder for images */
+#location-block{
+    grid-area: location;
+    display: flex;
+    justify-content:space-between;
 }
+/* Responsive adjustments can be added if needed */
 
-.exhibit-info h2 {
-    margin: 10px 0;
-    color: #b35457;
-    font-size: 2em;
-}
-
-.exhibit-info p {
-    margin: 5px 0;
-}
-
-.footer {
-    background-color: #b35457;
-    color: white;
-}
-
-.footer .exhibition-details p,
-.footer .location p {
-    margin: 5px 0;
-}

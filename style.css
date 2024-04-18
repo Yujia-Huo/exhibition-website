@@ -160,11 +160,13 @@ header {
 
 .project-thumbnail.hesitation {
     background-image: url('./cover_image/zhiman_b.png');
+    background-position: 75% 20%;
     /* Image on hover */
 }
 
 .project-thumbnail.wait {
     background-image: url('./cover_image/yihao_b.png');
+    background-position: 75% 70%;
     /* Image on hover */
 
 }
@@ -182,6 +184,7 @@ header {
 
 .project-thumbnail.text {
     background-image: url('./cover_image/Rachel_b.png');
+    background-position: 80% 50%;
     /* Image on hover */
 }
 

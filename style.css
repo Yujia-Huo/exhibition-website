@@ -66,7 +66,7 @@ header {
     justify-self: end;
     grid-area: maintitle;
     width: fit-content;
-    font-size: 32pt;
+    font-size: 28pt;
     text-align: right;
     /* This will right-align the inline contents */
 
@@ -92,6 +92,7 @@ header {
     /* This centers the .project divs on the cross axis (horizontally, in this case) */
     gap: 25px;
     /* This sets a gap between the .project divs */
+    margin-bottom: 2vh;
 }
 
 

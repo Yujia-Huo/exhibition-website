@@ -7,10 +7,18 @@ body {
     padding: 0;
     background: #EBE4DE;
     min-height: 94vh;
-  display: flex;
-  flex-direction: column;
-  color: #454545;
+    display: flex;
+    flex-direction: column;
+    color: #454545;
 }
+
+.preload-image {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-image: url('./cover_image/zhiman_b.png'), url('./cover_image/zhiman_r.png'), url('./cover_image/yihao_b.png'), url('./cover_image/yihao_r.png'), url('./cover_image/deni_b.png'), url('./cover_image/deni_r.png'), url('./cover_image/yujia_b.png'), url('./cover_image/yujia_r.png'), url('./cover_image/Rachel_b.png'), url('./cover_image/Rachel_r.png');
+}
+
 
 /* Header */
 header {
@@ -22,8 +30,8 @@ header {
     /* padding: 20px; */
     /* background: #000; */
     color: #454545;
-    grid-template-areas: 
-    "uni-info . . exh-info pro-info"
+    grid-template-areas:
+        "uni-info . . exh-info pro-info"
 }
 
 .university-info,
@@ -32,16 +40,16 @@ header {
     font-size: 14px;
 }
 
-.university-info{
+.university-info {
     grid-area: uni-info;
 }
 
 
-.exhibition-info{
+.exhibition-info {
     grid-area: exh-info;
 }
 
-.program-info{
+.program-info {
     grid-area: pro-info;
 }
 
@@ -59,32 +67,36 @@ header {
     grid-area: maintitle;
     width: fit-content;
     font-size: 36pt;
-    text-align: right; /* This will right-align the inline contents */
+    text-align: right;
+    /* This will right-align the inline contents */
 
-    
+
 }
 
-#main-title-grid{
+#main-title-grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     gap: 25px 18px;
     /* padding: 20px; */
-    grid-template-areas: 
-    "maintitle . . . ."
+    grid-template-areas:
+        "maintitle . . . ."
 }
 
 .projects {
     display: flex;
-    flex-direction: column; /* This will stack the .project divs vertically */
-    align-items: left; /* This centers the .project divs on the cross axis (horizontally, in this case) */
-    gap: 25px; /* This sets a gap between the .project divs */
+    flex-direction: column;
+    /* This will stack the .project divs vertically */
+    align-items: left;
+    /* This centers the .project divs on the cross axis (horizontally, in this case) */
+    gap: 25px;
+    /* This sets a gap between the .project divs */
 }
 
 
 
-.project{
+.project {
     /* margin-left: 20px; */
     width: 100%;
     display: grid;
@@ -92,23 +104,27 @@ header {
     grid-template-rows: auto;
     gap: 25px 18px;
     /* padding: 20px; */
-    grid-template-areas: 
-    ". img title nameProgram ."
+    grid-template-areas:
+        ". img title nameProgram ."
 
 }
 
 
 .project-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Inherits the text color from the parent */
-    display: block; /* Makes the link a block element to fit the .project div */
+    text-decoration: none;
+    /* Removes the underline from links */
+    color: inherit;
+    /* Inherits the text color from the parent */
+    display: block;
+    /* Makes the link a block element to fit the .project div */
 }
 
 
 
 .projects:hover .project-link:not(:hover) {
     color: #454545;
-    transition: color 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease;
+    /* Smooth transition */
 }
 
 /* You may need to adjust the thumbnail image opacity or add another overlay if you want the image to look greyed out */
@@ -118,18 +134,21 @@ header {
 
 
 .program-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Inherits the text color from the parent */
+    text-decoration: none;
+    /* Removes the underline from links */
+    color: inherit;
+    /* Inherits the text color from the parent */
 }
 
 .program-link:hover {
     color: #929292;
 }
+
 .project-thumbnail {
     position: relative;
     grid-area: img;
     width: 100%;
-    height:80px;
+    height: 80px;
     background-size: 100% 100%;
     background-position: center;
     background-size: cover;
@@ -139,25 +158,30 @@ header {
 
 
 .project-thumbnail.hesitation {
-    background-image: url('./cover_image/zhiman_b.png'); /* Image on hover */
+    background-image: url('./cover_image/zhiman_b.png');
+    /* Image on hover */
 }
 
 .project-thumbnail.wait {
-    background-image: url('./cover_image/yihao_b.png'); /* Image on hover */
+    background-image: url('./cover_image/yihao_b.png');
+    /* Image on hover */
 
 }
 
 .project-thumbnail.process {
-    background-image: url('./cover_image/deni_b.png'); /* Image on hover */
+    background-image: url('./cover_image/deni_b.png');
+    /* Image on hover */
 
 }
 
 .project-thumbnail.screen {
-    background-image: url('./cover_image/yujia_b.png'); /* Image on hover */
+    background-image: url('./cover_image/yujia_b.png');
+    /* Image on hover */
 }
 
 .project-thumbnail.text {
-    background-image: url('./cover_image/Rachel_b.png'); /* Image on hover */
+    background-image: url('./cover_image/Rachel_b.png');
+    /* Image on hover */
 }
 
 
@@ -183,8 +207,8 @@ header {
 
 
 
-.project-thumbnail .keyword{
-    font-size:30pt;
+.project-thumbnail .keyword {
+    font-size: 30pt;
     position: absolute;
     left: 0;
     color: #EBE4DE;
@@ -192,13 +216,13 @@ header {
 }
 
 
-.nameAndProgram{
+.nameAndProgram {
     font-size: 20px;
     grid-area: nameProgram;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 
-    font-style:italic;
+    font-style: italic;
 }
 
 .project-title {
@@ -209,9 +233,10 @@ header {
 }
 
 
-.discipline{
+.discipline {
     color: #BA3330;
 }
+
 /* Footer */
 footer {
     margin-top: auto;
@@ -223,34 +248,35 @@ footer {
     /* padding: 20px; */
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: 
-    ". . . time location"
+    grid-template-areas:
+        ". . . time location"
 }
 
 .exhibition-name,
-.location-name{
+.location-name {
     font-weight: bold;
     color: #BA3330;
 
 }
 
-.location{
+.location {
     text-align: right;
 }
 
-.date-time{
+.date-time {
     text-align: right;
 }
-#time{
+
+#time {
     grid-area: time;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
-#location-block{
+#location-block {
     grid-area: location;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
-/* Responsive adjustments can be added if needed */
 
+/* Responsive adjustments can be added if needed */

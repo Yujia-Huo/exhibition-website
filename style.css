@@ -92,7 +92,7 @@ header {
     /* This centers the .project divs on the cross axis (horizontally, in this case) */
     gap: 25px;
     /* This sets a gap between the .project divs */
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
 }
 
 

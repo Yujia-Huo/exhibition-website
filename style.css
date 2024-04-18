@@ -1,12 +1,15 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'europa', sans-serif;
+    margin: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
     padding: 0;
-    background: #fff;
-    min-height: 97vh;
+    background: #EBE4DE;
+    min-height: 94vh;
   display: flex;
   flex-direction: column;
+  color: #454545;
 }
 
 /* Header */
@@ -44,26 +47,38 @@ header {
 
 /* Main */
 
-h1 {
-    text-align: right;
+#main_title h1 {
     /* font-size: 4em; */
-    color: red;
+    margin: 0;
+    margin-top: 4vh;
+    color: #BA3330;
 }
 
-#main_title{
-    font-size:36pt;
-    line-height:100%;
-    width: 290pt;
-    margin-top:9vh;
-    margin-left: 9vw;
-    margin-bottom:0;
-    /* position: absolute; */
+#main_title {
+    justify-self: end;
+    grid-area: maintitle;
+    width: fit-content;
+    font-size: 36pt;
+    text-align: right; /* This will right-align the inline contents */
+
+    
+}
+
+#main-title-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 25px 18px;
+    /* padding: 20px; */
+    grid-template-areas: 
+    "maintitle . . . ."
 }
 
 .projects {
     display: flex;
     flex-direction: column; /* This will stack the .project divs vertically */
-    align-items: center; /* This centers the .project divs on the cross axis (horizontally, in this case) */
+    align-items: left; /* This centers the .project divs on the cross axis (horizontally, in this case) */
     gap: 25px; /* This sets a gap between the .project divs */
 }
 
@@ -83,25 +98,96 @@ h1 {
 }
 
 
+.project-link {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Inherits the text color from the parent */
+    display: block; /* Makes the link a block element to fit the .project div */
+}
+
+
+
+.projects:hover .project-link:not(:hover) {
+    color: #454545;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* You may need to adjust the thumbnail image opacity or add another overlay if you want the image to look greyed out */
+.projects:hover .project-link:not(:hover) {
+    color: #45454579;
+}
+
+
+.program-link {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Inherits the text color from the parent */
+}
+
+.program-link:hover {
+    color: #929292;
+}
 .project-thumbnail {
     position: relative;
     grid-area: img;
     width: 100%;
-    height:70px;
-    background-image: url('./Yujia_b.png'); /* Default image */
+    height:80px;
     background-size: 100% 100%;
     background-position: center;
-    transition: background-image 0.3s ease; /* Smooth transition for the hover effect */
+    background-size: cover;
+    transition: background-image 0.3s ease;
 }
 
-.project-thumbnail:hover {
-    background-image: url('./Yujia_r.png'); /* Image on hover */
+
+
+.project-thumbnail.hesitation {
+    background-image: url('./cover_image/zhiman_b.png'); /* Image on hover */
 }
+
+.project-thumbnail.wait {
+    background-image: url('./cover_image/yihao_b.png'); /* Image on hover */
+
+}
+
+.project-thumbnail.process {
+    background-image: url('./cover_image/deni_b.png'); /* Image on hover */
+
+}
+
+.project-thumbnail.screen {
+    background-image: url('./cover_image/yujia_b.png'); /* Image on hover */
+}
+
+.project-thumbnail.text {
+    background-image: url('./cover_image/Rachel_b.png'); /* Image on hover */
+}
+
+
+.project-link:hover .project-thumbnail.hesitation {
+    background-image: url('./cover_image/zhiman_r.png');
+}
+
+.project-link:hover .project-thumbnail.wait {
+    background-image: url('./cover_image/yihao_r.png');
+}
+
+.project-link:hover .project-thumbnail.process {
+    background-image: url('./cover_image/deni_r.png');
+}
+
+.project-link:hover .project-thumbnail.screen {
+    background-image: url('./cover_image/yujia_r.png');
+}
+
+.project-link:hover .project-thumbnail.text {
+    background-image: url('./cover_image/Rachel_r.png');
+}
+
+
+
 .project-thumbnail .keyword{
     font-size:30pt;
     position: absolute;
     left: 0;
-    color: #eaeaea;
+    color: #EBE4DE;
 
 }
 
@@ -112,15 +198,20 @@ h1 {
     display: flex;
     justify-content:space-between;
 
+    font-style:italic;
 }
 
 .project-title {
     font-size: 20px;
     grid-area: title;
     /* width: 200px; */
-    font-weight: bold;
+
 }
 
+
+.discipline{
+    color: #BA3330;
+}
 /* Footer */
 footer {
     margin-top: auto;
@@ -136,10 +227,20 @@ footer {
     ". . . time location"
 }
 
+.exhibition-name,
+.location-name{
+    font-weight: bold;
+    color: #BA3330;
+
+}
+
 .location{
     text-align: right;
 }
 
+.date-time{
+    text-align: right;
+}
 #time{
     grid-area: time;
     display: flex;

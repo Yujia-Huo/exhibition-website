@@ -1,4 +1,4 @@
-#infoSection{
+.infoSection{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -95,8 +95,18 @@ h3{
     font-size:16pt;
 }
 p{
+    line-height: 150%;
     margin:0;
-    margin-bottom: 2em;
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+}
+.infoSection{
+    font-weight: lighter;
+}
+
+.infoSection p{
+    margin-top: 0em;
+    margin-bottom: 1em;
 }
 .content p {
     padding: 0px;
@@ -126,4 +136,141 @@ p{
 #yk-image-3{
     width: 50%;
 
+}
+
+.yihao-link {
+    text-align: center;
+    text-decoration: none;
+    /* Removes the underline from links */
+    color: inherit;
+    /* Inherits the text color from the parent */
+}
+
+.yihao-link:hover {
+    color: #929292;
+}
+
+#link-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+}
+#yujia-image-1{
+    width: 50%;
+
+}
+
+
+
+#yujia-image-2,
+#yujia-image-3,
+#yujia-image-4,
+#yujia-image-{
+    width: fit-content;
+
+}
+
+#yujia-image-1{
+    margin-top:1.3em;
+}
+
+#film-element{
+    display: grid;
+    gap: 25px 5vw;
+    /* padding: 20px; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "shot  colors "
+        "camera  script "
+}
+
+#shot-viz{
+
+    grid-area: shot;
+}
+
+#color-viz{
+    grid-area: colors;
+}
+
+#camera-viz{
+    grid-area: camera;
+}
+
+#script-viz{
+    grid-area: script;
+}
+
+
+
+
+dl {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  dt {
+    font-weight: normal;
+    margin-top: 1.5em;
+  }
+  
+  dd {
+    margin-left: 20px; /* This provides indentation for the description */
+  }
+  
+  ol {
+    margin-left: 20px; /* Further indentation for nested list */
+    
+  }
+  
+  ol[type="a"] {
+    list-style-type: lower-alpha; /* Ensures the list is marked with lowercase letters */
+  }
+
+  #colorlist li::marker {
+    color: #BA3330;         /* Example style */
+    font-weight: bold;   /* Example style */
+  }
+
+
+  li{
+    margin-top: 1.5em;
+  }
+  
+  .highlight {
+    color: #BA3330;    /* Change the color */
+    font-weight: bold;  /* Make the text bold */
+  }
+
+
+  .image-container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: center; /* This centers inline or inline-block elements horizontally */
+    margin: 0 auto; /* This centers the container itself if it has a width less than 100% */
+}
+
+.image-container img {
+    display: block; /* Makes the image a block-level element so it respects text-align */
+    margin: 0 auto; /* Adds automatic horizontal margins to center the block-level image */
+    max-width: 100%; /* Ensures the image is responsive and does not overflow its container */
+}
+
+.image-container p{
+    text-align: left; /* This centers inline or inline-block elements horizontally */
+}
+
+
+#zhiman-image-1{
+    width:min-content;
+}
+#zhiman-image-5{
+    width:50%;
+}
+.quotes{
+    margin-left: 8vw;
+    margin-right: 8vw;
+    font-style: italic;
 }

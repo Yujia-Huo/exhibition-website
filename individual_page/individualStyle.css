@@ -23,6 +23,9 @@
     width: 15vw; /* Adjust size as necessary */
 }
 
+#keywords{
+    text-align: right;
+}
 .image-placeholder {
     width: 100%; /* Adjust size as necessary */
     padding-top: 50%; /* This will define the height of the square, keeping it responsive and square since it's based on the width */
@@ -55,15 +58,13 @@
 
 .content{
 
-    margin-top: 50px;
+    margin-top: 10vh;
 }
 
 .content img {
-    margin-top:30px;
     display: block; /* Makes the image a block-level element */
     max-width: 100%; /* Ensures the image is never larger than its container */
     height: auto; /* Maintains the aspect ratio of the image */
-    margin-right: 30vw;
 }
 
 
@@ -84,16 +85,45 @@ footer{
 h2{
     font-weight:normal;
 }
+
+.content h2{
+    font-weight:bold;
+    font-size:28pt;
+}
+
+h3{
+    font-size:16pt;
+}
 p{
     margin:0;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 .content p {
     padding: 0px;
-    font-size: 16px; /* Adjust size as necessary */
+    font-size: 12pt; /* Adjust size as necessary */
     align-self: start;
 }
 
 .info-head{
     font-weight:bold;
+}
+
+
+.yk-overview-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 0vh;
+    gap: 5vw;
+}
+
+#yk-image-1{
+    width: 50%;
+
+}
+
+#yk-image-3{
+    width: 50%;
+
 }
